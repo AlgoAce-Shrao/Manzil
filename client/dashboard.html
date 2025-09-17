@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard — Career Advisor</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/api.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1><a href="index.html">Career Advisor</a></h1>
+      <nav>
+        <a id="navLogout" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Your Dashboard</h2>
+    <div id="dashboardPanel" class="panel">
+      <div id="noResults">
+        <p>No quiz results yet. <a href="quiz.html">Take the quiz</a> to get AI recommendations.</p>
+      </div>
+      <div id="resultsList"></div>
+      <h3>Saved Colleges</h3>
+      <div id="savedColleges"></div>
+    </div>
+  </main>
+</body>
+</html>

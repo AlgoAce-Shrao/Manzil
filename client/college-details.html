@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>College Details — Career Advisor</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/api.js" defer></script>
+  <script src="js/collegeDetails.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><div class="container"><h1><a href="index.html">Career Advisor</a></h1></div></header>
+  <main class="container">
+    <div class="panel">
+      <h2 id="collegeName">College Name</h2>
+      <p id="collegeLocation"></p>
+      <h3>Admission Dates</h3>
+      <div id="admissionDates"></div>
+      <h3>Your Timeline</h3>
+      <form id="timelineForm" class="form-inline">
+        <input id="evTitle" placeholder="Event (e.g., SAT exam)" required />
+        <input id="evDate" type="date" required />
+        <input id="evNote" placeholder="Note (optional)" />
+        <button class="btn">Add Event</button>
+      </form>
+      <div id="timelineList"></div>
+    </div>
+  </main>
+</body>
+</html>

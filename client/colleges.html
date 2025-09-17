@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>College Directory — Career Advisor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/colleges-leaflet.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1><a href="index.html">Career Advisor</a></h1>
+      </div>
+    </header>
+
+    <main class="container grid">
+      <!-- Left panel: Filters + results -->
+      <section class="panel panel-left">
+        <h2>Find Colleges Near You</h2>
+        <div class="controls">
+          <div class="row">
+            <label
+              >Search (college/course):
+              <input
+                id="searchInput"
+                placeholder="e.g., Computer Science, IIT"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <label
+              >Stream filter:
+              <input id="streamInput" placeholder="Engineering, Commerce..." />
+            </label>
+          </div>
+          <div class="row">
+            <label
+              >Radius (km):
+              <span id="radiusValue">50</span>
+              <input
+                id="radiusInput"
+                type="range"
+                min="5"
+                max="200"
+                value="50"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <button id="btnFind" class="btn">Find Colleges Near Me</button>
+            <button id="btnUseMapCenter" class="btn ghost">
+              Search Around Map Center
+            </button>
+          </div>
+          <div class="row">
+            <label
+              ><input type="checkbox" id="onlyGovt" /> Show only Government
+              Colleges</label
+            >
+          </div>
+        </div>
+
+        <h3>Results</h3>
+        <div id="resultsList" class="list"></div>
+      </section>
+
+      <!-- Right panel: Map -->
+      <section class="panel panel-right">
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+  </body>
+</html>
